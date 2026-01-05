@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learning the /s/ Sound</title>
-  <script src="/_sdk/element_sdk.js"></script>
   <style>
     body {
       box-sizing: border-box;
@@ -28,19 +27,19 @@
       flex-direction: column;
     }
 
-    .page {
-      display: none;
+    .activity-section {
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
-      flex: 1;
-      min-height: 500px;
+      min-height: 400px;
+      border-bottom: 3px solid #E0E0E0;
     }
 
-    .page.active {
-      display: flex;
+    .activity-section:last-of-type {
+      border-bottom: none;
     }
 
     .letter-display {
@@ -242,58 +241,38 @@
       margin: 20px 0;
     }
 
-    .navigation {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-      background: white;
-      border-top: 2px solid #E0E0E0;
-    }
-
-    .nav-button {
+    .section-number {
       background: #2196F3;
       color: white;
-      border: none;
-      border-radius: 12px;
-      padding: 18px 45px;
-      font-size: 22px;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
       font-weight: bold;
-      user-select: none;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .nav-button:hover {
-      background: #1976D2;
-    }
-
-    .nav-button:disabled {
-      background: #CCCCCC;
-      cursor: not-allowed;
-    }
-
-    .page-indicator {
-      font-size: 20px;
-      color: #000000;
-      font-weight: bold;
+      margin-bottom: 20px;
     }
   </style>
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
  </head>
  <body>
-  <div class="app-wrapper"><!-- Page 1: Introduction -->
-   <div class="page active" id="page1">
+  <div class="app-wrapper"><!-- Section 1: Introduction -->
+   <div class="activity-section">
+    <div class="section-number">
+     1
+    </div>
     <div class="letter-display">
      s
     </div>
-    <div class="instruction-text" id="main_instruction_text">
+    <div class="instruction-text">
      This sound is /s/
     </div>
-    <div class="sound-text" id="say_instruction_text">
+    <div class="sound-text">
      Say it with me: /ssss/
     </div>
     <svg class="snake" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><!-- Snake body with pattern --> <defs>
@@ -302,9 +281,12 @@
       </pattern>
      </defs> <path d="M40,100 Q50,70 70,75 Q90,80 100,90 Q110,100 125,95 Q140,90 155,100" fill="none" stroke="#66BB6A" stroke-width="28" stroke-linecap="round" /> <path d="M40,100 Q50,70 70,75 Q90,80 100,90 Q110,100 125,95 Q140,90 155,100" fill="none" stroke="url(#snakePattern1)" stroke-width="24" stroke-linecap="round" /> <!-- Head --> <ellipse cx="162" cy="100" rx="20" ry="16" fill="#66BB6A" /> <ellipse cx="162" cy="100" rx="16" ry="13" fill="#81C784" /> <!-- Eyes --> <ellipse cx="158" cy="95" rx="5" ry="6" fill="white" /> <ellipse cx="166" cy="95" rx="5" ry="6" fill="white" /> <circle cx="158" cy="95" r="3" fill="black" /> <circle cx="166" cy="95" r="3" fill="black" /> <circle cx="159" cy="94" r="1.5" fill="white" /> <circle cx="167" cy="94" r="1.5" fill="white" /> <!-- Smile --> <path d="M157,103 Q162,106 167,103" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" /> <!-- Tongue --> <path d="M175,100 L183,98 M175,100 L183,102" stroke="#FF5252" stroke-width="2" stroke-linecap="round" />
     </svg>
-   </div><!-- Page 2: Listen -->
-   <div class="page" id="page2">
-    <div class="instruction-text" id="listen_title_text">
+   </div><!-- Section 2: Listen -->
+   <div class="activity-section">
+    <div class="section-number">
+     2
+    </div>
+    <div class="instruction-text">
      Listen for the sound
     </div>
     <div class="sound-text">
@@ -312,9 +294,12 @@
     </div>
     <svg class="listening-icon" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="35" fill="#BBDEFB" stroke="#2196F3" stroke-width="3" /> <path d="M35,40 Q50,35 65,40 Q50,50 35,40" fill="#2196F3" /> <circle cx="42" cy="42" r="3" fill="white" /> <circle cx="58" cy="42" r="3" fill="white" /> <path d="M40,60 Q50,65 60,60" fill="none" stroke="#2196F3" stroke-width="2" /> <path d="M70,35 Q75,40 70,45 M75,30 Q82,40 75,50 M80,25 Q88,40 80,55" fill="none" stroke="#2196F3" stroke-width="2" stroke-linecap="round" />
     </svg>
-   </div><!-- Page 3: Quiz -->
-   <div class="page" id="page3">
-    <div class="instruction-text" id="quiz_question_text">
+   </div><!-- Section 3: Quiz -->
+   <div class="activity-section">
+    <div class="section-number">
+     3
+    </div>
+    <div class="instruction-text">
      Which one starts with /s/?
     </div>
     <div class="picture-grid">
@@ -347,12 +332,15 @@
       </div>
      </div>
     </div>
-   </div><!-- Page 4: Jump Activity -->
-   <div class="page" id="page4">
-    <div class="instruction-text" id="jump_instruction_text">
+   </div><!-- Section 4: Jump Activity -->
+   <div class="activity-section">
+    <div class="section-number">
+     4
+    </div>
+    <div class="instruction-text">
      Jump if you hear /s/
     </div>
-    <div class="instruction-text" style="font-size: 24px;" id="jump_subtext_text">
+    <div class="instruction-text" style="font-size: 24px;">
      I will say a word.
     </div>
     <div class="jump-area" id="jumpArea" onclick="performJump()">
@@ -360,12 +348,15 @@
     </div>
     <div class="word-buttons"><button class="word-button" onclick="playWord('sun', true)">sun</button> <button class="word-button" onclick="playWord('cat', false)">cat</button> <button class="word-button" onclick="playWord('sock', true)">sock</button> <button class="word-button" onclick="playWord('ball', false)">ball</button>
     </div>
-   </div><!-- Page 5: Feed the Snake -->
-   <div class="page" id="page5">
-    <div class="instruction-text" id="feed_title_text">
+   </div><!-- Section 5: Feed the Snake -->
+   <div class="activity-section">
+    <div class="section-number">
+     5
+    </div>
+    <div class="instruction-text">
      Feed the snake!
     </div>
-    <div class="instruction-text" style="font-size: 24px;" id="feed_instruction_text">
+    <div class="instruction-text" style="font-size: 24px;">
      Feed it things that start with /s/
     </div>
     <div class="feed-area">
@@ -406,9 +397,12 @@
       </div>
      </div>
     </div>
-   </div><!-- Page 6: Success -->
-   <div class="page" id="page6">
-    <div class="instruction-text" id="final_instruction_text">
+   </div><!-- Section 6: Success -->
+   <div class="activity-section">
+    <div class="section-number">
+     6
+    </div>
+    <div class="instruction-text">
      Say the sound again
     </div>
     <div class="sound-text">
@@ -422,87 +416,54 @@
     </svg>
     <svg class="success-icon" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="#2196F3" /> <path d="M30,50 L45,65 L70,35" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
-   </div><!-- Navigation -->
-   <div class="navigation"><button class="nav-button" id="prevBtn" onclick="changePage(-1)">Previous</button>
-    <div class="page-indicator" id="pageIndicator">
-     Page 1 of 6
-    </div><button class="nav-button" id="nextBtn" onclick="changePage(1)">Next</button>
    </div>
   </div>
   <script>
-    const defaultConfig = {
-      main_instruction: "This sound is /s/",
-      say_instruction: "Say it with me: /ssss/",
-      listen_title: "Listen for the sound",
-      quiz_question: "Which one starts with /s/?",
-      jump_instruction: "Jump if you hear /s/",
-      jump_subtext: "I will say a word.",
-      feed_title: "Feed the snake!",
-      feed_instruction: "Feed it things that start with /s/",
-      final_instruction: "Say the sound again"
-    };
-
-    let currentPage = 1;
-    const totalPages = 6;
-
-    async function onConfigChange(config) {
-      document.getElementById('main_instruction_text').textContent = config.main_instruction || defaultConfig.main_instruction;
-      document.getElementById('say_instruction_text').textContent = config.say_instruction || defaultConfig.say_instruction;
-      document.getElementById('listen_title_text').textContent = config.listen_title || defaultConfig.listen_title;
-      document.getElementById('quiz_question_text').textContent = config.quiz_question || defaultConfig.quiz_question;
-      document.getElementById('jump_instruction_text').textContent = config.jump_instruction || defaultConfig.jump_instruction;
-      document.getElementById('jump_subtext_text').textContent = config.jump_subtext || defaultConfig.jump_subtext;
-      document.getElementById('feed_title_text').textContent = config.feed_title || defaultConfig.feed_title;
-      document.getElementById('feed_instruction_text').textContent = config.feed_instruction || defaultConfig.feed_instruction;
-      document.getElementById('final_instruction_text').textContent = config.final_instruction || defaultConfig.final_instruction;
+    function checkAnswer(element) {
+      const isCorrect = element.dataset.answer === 'correct';
+      if (isCorrect) {
+        element.classList.add('correct');
+      } else {
+        element.classList.add('incorrect');
+        setTimeout(() => {
+          element.classList.remove('incorrect');
+        }, 1000);
+      }
     }
 
-    function mapToCapabilities(config) {
-      return {
-        recolorables: [],
-        borderables: [],
-        fontEditable: undefined,
-        fontSizeable: undefined
-      };
+    function performJump() {
+      const jumpArea = document.getElementById('jumpArea');
+      jumpArea.classList.add('jumping');
+      setTimeout(() => {
+        jumpArea.classList.remove('jumping');
+      }, 500);
     }
 
-    function mapToEditPanelValues(config) {
-      return new Map([
-        ["main_instruction", config.main_instruction || defaultConfig.main_instruction],
-        ["say_instruction", config.say_instruction || defaultConfig.say_instruction],
-        ["listen_title", config.listen_title || defaultConfig.listen_title],
-        ["quiz_question", config.quiz_question || defaultConfig.quiz_question],
-        ["jump_instruction", config.jump_instruction || defaultConfig.jump_instruction],
-        ["jump_subtext", config.jump_subtext || defaultConfig.jump_subtext],
-        ["feed_title", config.feed_title || defaultConfig.feed_title],
-        ["feed_instruction", config.feed_instruction || defaultConfig.feed_instruction],
-        ["final_instruction", config.final_instruction || defaultConfig.final_instruction]
-      ]);
+    function playWord(word, startsWithS) {
+      if (startsWithS) {
+        performJump();
+      }
     }
 
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange,
-        mapToCapabilities,
-        mapToEditPanelValues
-      });
-    }
-
-    function changePage(direction) {
-      const pages = document.querySelectorAll('.page');
-      pages[currentPage - 1].classList.remove('active');
+    function feedSnake(element, isCorrect) {
+      if (element.classList.contains('fed')) return;
       
-      currentPage += direction;
-      if (currentPage < 1) currentPage = 1;
-      if (currentPage > totalPages) currentPage = totalPages;
-      
-      pages[currentPage - 1].classList.add('active');
-      
-      updateNavigation();
+      if (isCorrect) {
+        element.classList.add('fed');
+      } else {
+        element.style.animation = 'shake 0.5s';
+        setTimeout(() => {
+          element.style.animation = '';
+        }, 500);
+      }
     }
-
-    function updateNavigation() {
-      document.getElementById('prevBtn').disabled = currentPage === 1;
-      document.getElementById('nextBtn').disabled = currentPage === totalPages;
-      document.getElementB
+  </script>
+  <style>
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+  </style>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b923ae3b5476a54',t:'MTc2NzYwODI5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+     </html>
