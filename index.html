@@ -5,33 +5,26 @@
   <title>Harry's Learning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f9f9f9;
-      padding: 20px;
-    }
-    button {
-      font-size: 24px;
-      padding: 20px;
-      margin: 15px;
-      border-radius: 12px;
-    }
+    body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background: #f9f9f9; }
+    button { font-size: 24px; padding: 20px; margin: 15px; border-radius: 12px; }
   </style>
 </head>
 <body>
 
-  <h1>Harry's Learning</h1>
-  <p>Tap a sound</p>
+<h1>Harry's Learning</h1>
+<p>Choose an activity:</p>
 
-  <button onclick="playSound('s')">/s/</button>
-  <button onclick="playSound('a')">/a/</button>
+<!-- LINK TO S-SOUND GAME -->
+<a href="s-sound.html">
+  <button>/s/ sound game</button>
+</a>
 
-  <script>
-    function playSound(sound) {
-      alert("Say " + sound);
-    }
-  </script>
+<!-- LINK TO FUTURE ACTIVITIES -->
+<!-- Example:
+<a href="a-sound.html">
+  <button>/a/ sound game</button>
+</a>
+-->
 
 </body>
 </html>
