@@ -91,6 +91,8 @@
       flex-direction: column;
       align-items: center;
       gap: 10px;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .picture-option:hover {
@@ -139,6 +141,8 @@
       font-size: 60px;
       cursor: pointer;
       transition: all 0.2s ease;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .jump-area:hover {
@@ -172,6 +176,8 @@
       cursor: pointer;
       transition: all 0.3s ease;
       font-weight: bold;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .word-button:hover {
@@ -211,6 +217,8 @@
       flex-direction: column;
       align-items: center;
       gap: 8px;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .food-item:hover {
@@ -253,6 +261,8 @@
       cursor: pointer;
       transition: all 0.3s ease;
       font-weight: bold;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .nav-button:hover {
@@ -495,14 +505,4 @@
     function updateNavigation() {
       document.getElementById('prevBtn').disabled = currentPage === 1;
       document.getElementById('nextBtn').disabled = currentPage === totalPages;
-      document.getElementById('pageIndicator').textContent = `Page ${currentPage} of ${totalPages}`;
-    }
-
-    function checkAnswer(element) {
-      const isCorrect = element.dataset.answer === 'correct';
-      if (isCorrect) {
-        element.classList.add('correct');
-      } else {
-        element.classList.add('incorrect');
-        setTimeout(() => {
-          element.classList.remove
+      document.getElementB
