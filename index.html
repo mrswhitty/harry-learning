@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harry's Learning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    button {
+      font-size: 24px;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Harry's Learning</h1>
+  <p>Tap a sound</p>
+
+  <button onclick="playSound('s')">/s/</button>
+  <button onclick="playSound('a')">/a/</button>
+
+  <script>
+    function playSound(sound) {
+      alert("Say " + sound);
+    }
+  </script>
+
+</body>
+</html>
